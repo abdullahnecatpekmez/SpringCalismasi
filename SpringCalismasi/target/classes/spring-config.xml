@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="customer" class="com.spring.traning.xml.Customer">
+		 <property name="name" value="abdullah"></property>
+		 <property name="address" ref="customerAddress"></property>
+</bean>
+
+<bean id="customerAddress" class="com.spring.traning.xml.Address">
+		<property name="street" value="Customer Address"></property>
+</bean>
+
+<bean id="companyAddress" class="com.spring.traning.xml.Address">
+		<property name="street" value="Company Address"></property>
+</bean>
+
+<bean id="company" class="com.spring.traning.xml.Company">
+		<property name="name" value="Youtube videosundan izlenerek kodlanmistir"></property>
+		<property name="customer" ref="customer"></property>	
+		<property name="address" ref="companyAddress"></property>
+</bean>
+
+
+</beans>
